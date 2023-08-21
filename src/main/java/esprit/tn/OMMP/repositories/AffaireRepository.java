@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 
 import esprit.tn.OMMP.entities.Affaire;
 
-public interface AffaireRepository extends JpaRepository<Affaire,Long>{
+public interface AffaireRepository extends JpaRepository<Affaire, Long> {
 
     // Custom query to find Affaires by a specific attribute
     List<Affaire> findByNumber(int value);
@@ -20,6 +20,6 @@ public interface AffaireRepository extends JpaRepository<Affaire,Long>{
     // Example of a custom count query
     @Query("SELECT COUNT(a) FROM Affaire a WHERE a.NUMAFFAIRE = :attributeValue")
     Long countAffairesByNumber(@Param("attributeValue") int attributeValue);
-    
+
     // Add more custom methods here as needed
 }

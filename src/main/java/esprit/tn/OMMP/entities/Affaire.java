@@ -13,17 +13,17 @@ public class Affaire {
     @Id
     @GeneratedValue
     private Long idAffaire;
-    private int idS; //foreign key mtaa session
-    private int dem; //id taa demandeur
-    private int def; //id taa defendeur
-    private Date dateDeLaMesure; //date mtaa naarch chneya
-    private int trib; //id taa tribunal
-    private int avo; //id taa l avocat
-    private String sujet; //subject taa l'affaire
-    private float montantOuValeur; 
-    private int direction; //direction mtaa naarch chnowa
+    private Long idS; // foreign key mtaa session
+    private Long dem; // id taa demandeur
+    private Long def; // id taa defendeur
+    private Date dateDeLaMesure; // date mtaa naarch chneya
+    private Long trib; // id taa tribunal
+    private Long avo; // id taa l avocat
+    private String sujet; // subject taa l'affaire
+    private float montantOuValeur;
+    private Long direction; // direction mtaa naarch chnowa
     private String jugementdel_affaire;
-    private int huis; //id mtaa l'huissier
-    private int etatAffaire; //etat mtaa l'affaire clawzed wala la
-    private int NUMAFFAIRE; //numero mtaa l'affaire
+    private Long huis; // id mtaa l'huissier
+    private Long etatAffaire; // etat mtaa l'affaire clawzed wala la
+    private Long NUMAFFAIRE; // numero mtaa l'affaire
 }
