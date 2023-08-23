@@ -10,8 +10,8 @@ import esprit.tn.OMMP.entities.Affaire;
 
 public interface AffaireRepository extends JpaRepository<Affaire, Long> {
 
-    // Custom query to find Affaires by a specific attribute
-    List<Affaire> findByNumber(int value);
+    // // Custom query to find Affaires by a specific attribute
+    // List<Affaire> findByNumber(int value);
 
     // Custom query using JPQL
     @Query("SELECT a FROM Affaire a WHERE a.NUMAFFAIRE = :attributeValue")

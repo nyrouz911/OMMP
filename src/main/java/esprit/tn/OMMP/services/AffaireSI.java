@@ -14,5 +14,5 @@ public interface AffaireSI {
 
     Affaire updateAffaire(Long id, Affaire affaire);
 
-    void deleteAffaire(Long id);
+    void deleteAffaire(Affaire affaire);
 }

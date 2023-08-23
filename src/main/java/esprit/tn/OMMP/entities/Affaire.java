@@ -11,7 +11,7 @@ import lombok.Data;
 @Entity
 public class Affaire {
     @Id
-    @GeneratedValue
+    @GeneratedValue 
     private Long idAffaire;
     private Long idS; // foreign key mtaa session
     private Long dem; // id taa demandeur

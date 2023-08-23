@@ -44,7 +44,7 @@ public class AffaireService implements AffaireSI {
     }
 
     @Override
-    public void deleteAffaire(Long id) {
-        affaireRepository.deleteById(id);
+    public void deleteAffaire(Affaire affaire) {
+        affaireRepository.delete(affaire);
     }
 }
