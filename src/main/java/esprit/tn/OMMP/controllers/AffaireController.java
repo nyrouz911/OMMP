@@ -10,31 +10,30 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import esprit.tn.OMMP.entities.Affaire;
-import esprit.tn.OMMP.repositories.AffaireRepository;
 import esprit.tn.OMMP.services.AffaireService;
 
 @RestController
 @RequestMapping("affaire")
 public class AffaireController {
     @Autowired
-    AffaireRepository affaireRepository;
+    //AffaireRepository affaireRepository;
     AffaireService affaireservice;
 
     @PostMapping
     Affaire save (@RequestBody Affaire affaire){
-        return affaireRepository.save(affaire);
+        return affaireservice.createAffaire(affaire);
     }
 
     @GetMapping
     List<Affaire> getAll(){
-        return affaireRepository.findAll();
+        return affaireservice.getAllAffaires();
     }
     
     //ATTENTION HOUNI BCH TAAYET LEL SERVICE LI HOWA BIDOU BCH YAAYET LEL REPOSITORY 
     //MOUCH TAAYET LEL REPOSITORY TOUL
 
-    // @PostMapping
-    // void delete (@RequestBody Affaire affaire){
-    //     affaireservice.deleteAffaire(affaire);
-    // }
+    
+    void delete (@RequestBody Affaire affaire){
+        affaireservice.deleteAffaire(affaire);
+    }
 }
